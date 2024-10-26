@@ -25,5 +25,5 @@ export default function HomePage({ activeTab }: HomePageProps) {
     }
   };
 
-  return <div className="flex items-center h-full w-full">{getContent()}</div>;
+  return <div className="flex items-center mt-5 w-full">{getContent()}</div>;
 }

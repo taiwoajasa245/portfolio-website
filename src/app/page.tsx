@@ -38,7 +38,7 @@ export default function Home() {
           <div className="w-full h-screen flex flex-col  overflow-y-auto">
             <Header />
             <Navbar onTabChange={setActiveTab} />
-            <div className="flex-grow overflow-auto">
+            <div className="flex-grow overflow-auto scrollbar-hide">
               <HomePage activeTab={activeTab} /> {/* Pass activeTab as prop */}
             </div>
             {/* footer */}
