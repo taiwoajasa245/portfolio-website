@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import AboutSideNav from "@/ui/AboutTab/AboutSideNav";
 import ProjectsSideNav from "@/ui/ProjectsTab/ProjectsSideNav";
@@ -20,14 +19,14 @@ export default function Navbar({ onTabChange }: NavbarProps) {
   const handleTabChange = (tab: TabType) => {
     setIsActive(tab);
     onTabChange(tab);
-    setIsOpen(false); 
+    setIsOpen(false);
   };
 
   const renderSideNavContent = () => {
     if (isActive === "project") {
       return <ProjectsSideNav closeModal={() => setIsOpen(false)} />;
     } else if (isActive === "about") {
-      return <AboutSideNav  closeModal={() => setIsOpen(false)} />;
+      return <AboutSideNav closeModal={() => setIsOpen(false)} />;
     } else {
       return (
         <div className="text-center">

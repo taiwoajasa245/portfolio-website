@@ -9,7 +9,7 @@ export default function Biography() {
           {/* Text beside the vertical line */}
           <div className="text-[#8E8E8E] text-[14px] mt-8">
             <p className="">
-              I'm a dedicated and passionate Backend Developer and App Developer
+              I&apos;m a dedicated and passionate Backend Developer and App Developer
               with more than 2 years of experience in building robust, scalable,
               and efficient software solutions. My journey in the world of
               programming began with a fascination for how things work behind

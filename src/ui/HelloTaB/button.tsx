@@ -7,11 +7,11 @@ import Link from "next/link";
 export default function DownloadResume() {
   const [iconSrc, setIconSrc] = useState("/link-icon.svg");
 
-  const handleDownload = () => {
-    // Logic to trigger the download
+  // const handleDownload = () => {
+  //   // Logic to trigger the download
 
-    console.log("Downloading resume...");
-  };
+  //   console.log("Downloading resume...");
+  // };
 
   return (
     <Link href={"/Ajasa Taiwo Portfolio.pdf"} download={true} target="_blank">

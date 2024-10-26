@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import NumbersList from "@/components/NumberLIst";
-import ProjectsTabContent from "./ProjectsTabContent";
+// import ProjectsTabContent from "./ProjectsTabContent";
 import Project_2024 from "./Project_2024";
 import Project_2023 from "./Project_2023";
 import { useTabContext } from "@/context/ProjectTabContext";
@@ -9,8 +9,6 @@ export const metadata: Metadata = {
   title: "Ajasa Taiwo Portfolio",
   description: "Portfolio of a backend developer",
 };
-
-
 
 export default function ProjectsTab() {
   const { activeTab } = useTabContext();
@@ -35,9 +33,7 @@ export default function ProjectsTab() {
         <NumbersList />
 
         <div className=" ml-3">
-          {/* <ProjectsTabContent />
-          <Project_2024 />
-          <Project_2023 /> */}
+          {/* <ProjectsTabContent /> */}
           {renderContent()}
         </div>
       </div>
