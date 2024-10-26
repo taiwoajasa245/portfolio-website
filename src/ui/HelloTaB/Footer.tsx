@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full h-[55px] bg-[#252525] flex items-center justify-start shadow-inner">
+    <footer className="w-full h-[30px] bg-[#252525] flex items-center justify-start shadow-inner">
       <div className="flex  items-center w-full ">
-        <p className="pl-5 text-[15px]">
+        <p className="pl-5 text-[10px]">
             Connect With me: 
         </p>
         <a
