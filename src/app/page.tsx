@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { TabProvider } from "@/context/AboutTabContext";
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import HomePage from "@/ui/HomePage";
 import Footer from "@/components/Footer";
@@ -36,7 +36,7 @@ export default function Home() {
       <ProjectTabProvider>
         <TabProvider>
           <div className="w-full h-screen flex flex-col  overflow-y-auto">
-            <Header />
+            {/* <Header /> */}
             <Navbar onTabChange={setActiveTab} />
             <div className="flex-grow overflow-auto scrollbar-hide">
               <HomePage activeTab={activeTab} /> {/* Pass activeTab as prop */}
