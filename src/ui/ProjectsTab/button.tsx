@@ -31,8 +31,8 @@ export default function ProjectBtn({
         <Image
           src={gitHubIconSrc}
           alt="GitHub icon"
-          width={15}
-          height={15}
+          width={10}
+          height={10}
           className="object-contain"
         />
       </a>
@@ -51,8 +51,8 @@ export default function ProjectBtn({
         <Image
           src={previewIconSrc}
           alt="Link icon"
-          width={15}
-          height={15}
+          width={10}
+          height={10}
           className="object-contain"
         />
       </a>
