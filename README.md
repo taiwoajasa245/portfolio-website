@@ -14,6 +14,30 @@ pnpm dev
 bun dev
 ```
 
+
+
+## Project Structure
+
+taiwo-portfolio/
+├── public/                  # Static assets like images, resumes
+│   └── resume.pdf
+├── src/                     # All source code lives here
+│   ├── app/                 # App router folder for routes
+│   │   ├── layout.tsx        # Root layout
+│   │   ├── page.tsx          # Home page
+│   │   ├── about/           # About page route
+│   │   │   └── page.tsx
+│   │   ├── global.css       # Global styles
+│   │   └── components/      # Reusable components
+│   │       ├── Navbar.tsx
+│   │       ├── Footer.tsx
+│   │       └── SocialIcons.tsx
+├── .gitignore               # Files to ignore in version control
+├── package.json             # Project dependencies and scripts
+└── README.md                # Documentation of the project
+
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
