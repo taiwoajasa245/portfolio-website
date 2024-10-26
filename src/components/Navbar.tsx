@@ -13,7 +13,7 @@ interface NavbarProps {
 
 export default function Navbar({ onTabChange }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isActive, setIsActive] = useState<String>("hello");
+  const [isActive, setIsActive] = useState<string>("hello");
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleTabChange = (tab: TabType) => {
