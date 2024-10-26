@@ -30,7 +30,7 @@ export default function ProjectsCard({
             className={`h-[178px] w-[1px] bg-[#343434] mr-4 mt-1 rounded `}
           />
           <div className=" mt-5">
-            <p className="text-[15px] text-[#8E8E8E]">{technologies}</p>
+            <p className="text-[12px] text-[#8E8E8E]">{technologies}</p>
 
             <div className="flex">
               {/* line  */}
@@ -38,7 +38,7 @@ export default function ProjectsCard({
                 className={`h-[125px] w-[1px] bg-[#343434] mr-4 mt-1 rounded `}
               />
 
-              <div className="flex flex-col mt-5  text-[#8E8E8E]  text-[12px]">
+              <div className="flex flex-col mt-5  text-[#8E8E8E]  text-[10px]">
                 <p> {details}</p>
                 <ProjectBtn
                   gitHubUrl="https://github.com/taiwoajasa245"
