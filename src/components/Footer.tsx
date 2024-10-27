@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="shadow-inner">
       <div className="w-full h-[30px] bg-[#252525] flex items-center justify-center ">
         <a
           href="https://twitter.com"

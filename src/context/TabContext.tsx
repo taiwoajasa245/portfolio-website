@@ -1,19 +1,18 @@
-// TabContext.tsx
 import { createContext, useContext, useState, ReactNode } from "react";
 
-// Define valid active div types
-type ActiveDivType = "biography" | "skills" | "experience";
+// Define valid active tab types
+type ActiveTabType = "hello" | "about" | "project";
 
 interface TabContextProps {
-  activeAboutTab: ActiveDivType;
-  setActiveTab: (tab: ActiveDivType) => void;
+  activeTab: ActiveTabType;
+  setActiveTab: (tab: ActiveTabType) => void;
 }
 
 // Create the context
 const TabContext = createContext<TabContextProps | undefined>(undefined);
 
 // Custom hook to use the context
-export const useAboutTabContext = () => {
+export const useTabContext = () => {
   const context = useContext(TabContext);
   if (!context) {
     throw new Error("useTabContext must be used within a TabProvider");
@@ -22,11 +21,11 @@ export const useAboutTabContext = () => {
 };
 
 // Context Provider
-export const AboutTabProvider = ({ children }: { children: ReactNode }) => {
-  const [activeAboutTab, setActiveTab] = useState<ActiveDivType>("biography");
+export const TabProvider = ({ children }: { children: ReactNode }) => {
+  const [activeTab, setActiveTab] = useState<ActiveTabType>("hello");
 
   return (
-    <TabContext.Provider value={{ activeAboutTab, setActiveTab }}>
+    <TabContext.Provider value={{ activeTab, setActiveTab }}>
       {children}
     </TabContext.Provider>
   );

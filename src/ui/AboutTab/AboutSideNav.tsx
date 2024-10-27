@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTabContext } from "@/context/AboutTabContext";
+import { useAboutTabContext } from "@/context/AboutTabContext";
 import Image from "next/image";
 
 // Define valid active div types
@@ -10,8 +10,8 @@ interface AboutSideNavProps {
 }
 
 export default function AboutSideNav({ closeModal }: AboutSideNavProps) {
-  const { activeTab, setActiveTab } = useTabContext();
-  const [activeDiv, setActiveDiv] = useState<ActiveDivType>(activeTab);
+  const { activeAboutTab, setActiveTab } = useAboutTabContext();
+  const [activeDiv, setActiveDiv] = useState<ActiveDivType>(activeAboutTab);
 
   // Individual functions for each div
   const handleBiographyClick = () => {
@@ -58,7 +58,7 @@ export default function AboutSideNav({ closeModal }: AboutSideNavProps) {
         setActiveTab(tab); // Update the active tab in context
       }}
       className={`flex gap-3 items-center mb-8 w-full cursor-pointer ${
-        isActive || activeTab === tab ? "bg-[#1E1E1E]" : "bg-transparent"
+        isActive || activeAboutTab === tab ? "bg-[#1E1E1E]" : "bg-transparent"
       }`}
     >
       <Image

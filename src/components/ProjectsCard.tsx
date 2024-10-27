@@ -29,6 +29,7 @@ export default function ProjectsCard({
           <div
             className={`h-[178px] w-[1px] bg-[#343434] mr-4 mt-1 rounded `}
           />
+          
           <div className=" mt-5">
             <p className="text-[12px] text-[#8E8E8E]">{technologies}</p>
 

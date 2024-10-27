@@ -1,7 +1,7 @@
 export default function Biography() {
   return (
     <>
-      <div className="w-full mx-5 mb-20 ">
+      <div className="w-full mx-5  ">
         <p className="text-[25px] text-[#FDFDFD]">About me</p>
 
         <div className="flex ">
