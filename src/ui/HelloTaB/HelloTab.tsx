@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Grettings from "@/components/Grettings";
 import VerticalLine from "@/components/VerticalLIne";
-import NumbersList from "@/components/NumberLIst";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -10,12 +9,23 @@ export const metadata: Metadata = {
 };
 
 export default function HelloPage() {
+  const numbers = Array.from({ length: 30 }, (_, index) => index + 1); // Creates an array [1, 2, ..., 50]
+
   return (
     <>
       {/* clean code  */}
-      <div className="flex items-center w-full ">
+      <div className="flex items-center w-full h-full">
         {/*  number-list */}
-        <NumbersList />
+        <div className="flex ml-3 md:ml-16 flex-col items-center justify-center h-full ">
+          {numbers.map((num) => (
+            <div
+              key={num}
+              className=" h-full text-[#343434] text-[16px] md:text-[10px]"
+            >
+              <p>{num}</p>
+            </div>
+          ))}
+        </div>
 
         <div className="flex items-center md:hidden">
           <VerticalLine height="500" />
@@ -33,7 +43,7 @@ export default function HelloPage() {
           <div className={`h-[50px] w-[1px] ml-5 bg-[#343434] rounded `} />
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden ">
           <Grettings />
         </div>
 

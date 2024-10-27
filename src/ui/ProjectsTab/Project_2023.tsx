@@ -3,7 +3,7 @@ import ProjectsCard from "@/components/ProjectsCard";
 export default function Project_2023() {
   return (
     <>
-      <div className="w-full  mt-5 ">
+      <div className="w-full  mt-5 ml-5">
         <p className="text-[25px] text-[#FDFDFD]">Projects</p>
 
         <div>
@@ -11,18 +11,19 @@ export default function Project_2023() {
           {/* <div className={`h-[480px] w-[1px] bg-[#343434] mr-5 rounded `} /> */}
 
           {/* Cards beside the vertical line */}
-          <div className="">
+          <div className=" flex flex-wrap">
             <ProjectsCard
               title="Restaurant Management"
               technologies="AngularJS. Mongodb."
-              details="taurants looking to improve operational efficiency, enhance customer satisfaction, and stay competitive in the industry."
+              details="A or modern restaurants looking to improve operational efficiency, enhance customer satisfaction, and stay competitive in the industry."
             />
 
             <ProjectsCard
-              title=" Management "
-              technologies="NodeJS. Mongodb."
-              details="A Restaurant Management System is an es stay competitive in the industry."
+              title=" R-Management System"
+              technologies="R-NodeJS. Mongodb."
+              details="A Restaurant Management System is an essential tool for satisfaction, and stay competitive in the industry."
             />
+      
           </div>
         </div>
       </div>

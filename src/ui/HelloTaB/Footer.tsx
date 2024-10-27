@@ -4,15 +4,13 @@ export default function Footer() {
   return (
     <footer className="w-full h-[30px] bg-[#252525] flex items-center justify-start shadow-inner">
       <div className="flex  items-center w-full ">
-        <p className="pl-5 text-[10px]">
-            Connect With me: 
-        </p>
+        <p className="pl-5 text-[10px] md:text-[13px]">Connect With me:</p>
         <a
-          href="https://twitter.com"
+          href="http://x.com/Tech_With_Taiwo"
+
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Twitter"
-
         >
           <Image
             src="/twitter-icon.svg"
@@ -24,14 +22,15 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://twitter.com"
+          href="https://www.linkedin.com/in/ajasa-taiwo"
+
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="linkden"
         >
           <Image
             src="/linkden-icon.svg"
-            alt="Twitter Logo"
+            alt="linkden Logo"
             width={18}
             height={18}
             className="object-contain cursor-pointer ml-2"
@@ -39,14 +38,14 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://twitter.com"
+          href="mailto:ajasataiwo45@gmail.com?subject=Let's%20Connect&body=Hi%2C%20I'd%20like%20to%20talk%20to%20you."
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="Gmail"
         >
           <Image
             src="/mail-icon.svg"
-            alt="Twitter Logo"
+            alt="Gmail Logo"
             width={18}
             height={18}
             className="object-contain cursor-pointer  ml-2"
@@ -54,15 +53,14 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://twitter.com"
+          href="http://github.com/taiwoajasa245"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
-          
+          aria-label="Github"
         >
           <Image
             src="/github-icon.svg"
-            alt="Twitter Logo"
+            alt="Github Logo"
             width={18}
             height={18}
             className="object-contain cursor-pointer  ml-2"

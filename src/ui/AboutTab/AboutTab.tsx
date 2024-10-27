@@ -5,6 +5,7 @@ import Biography from "./Biography";
 import NumbersList from "@/components/NumberLIst";
 import Skills from "./Skills";
 import AboutSideNav from "./AboutSideNav";
+import Experience from "./Experience";
 
 export const metadata: Metadata = {
   title: "Ajasa Taiwo Portfolio",
@@ -22,7 +23,7 @@ export default function AboutTab() {
       case "skills":
         return <Skills />;
       case "experience":
-        return <Biography />;
+        return <Experience />;
       default:
         return null;
     }
@@ -44,13 +45,14 @@ export default function AboutTab() {
 
   return (
     <>
-      <div className="flex items-center h-screen bg-emerald-700">
-        <div className="h-screen w-[276px] bg-[#252525] hidden md:flex md:flex-col ">
-          <div className="mt-5">{renderSideNavTitle()}</div>
+      <div className="flex items-center h-full w-full ">
+        <div className="h-full w-[276px] bg-[#252525] hidden md:flex md:flex-col  ">
+          <div className="p-5">{renderSideNavTitle()}</div>
           <AboutSideNav closeModal={() => null} />
         </div>
 
-        {/*  number-list */}
+         {/* number-list */}
+
         <NumbersList />
 
         {renderContent()}

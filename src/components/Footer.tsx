@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="shadow-inner">
       <div className="w-full h-[30px] bg-[#252525] flex items-center justify-center ">
         <a
-          href="https://twitter.com"
+          href="http://x.com/Tech_With_Taiwo"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Twitter"
@@ -20,15 +20,15 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://twitter.com"
+          href="https://www.linkedin.com/in/ajasa-taiwo"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="linkden"
           className=" cursor-pointer ml-1"
         >
           <Image
             src="/linkden-icon.svg"
-            alt="Twitter Logo"
+            alt="linkden Logo"
             width={18}
             height={18}
             className="object-contain cursor-pointer ml-4"
@@ -36,15 +36,15 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://twitter.com"
+          href="mailto:ajasataiwo45@gmail.com?subject=Let's%20Connect&body=Hi%2C%20I'd%20like%20to%20talk%20to%20you."
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="Gmail"
           className=" cursor-pointer ml-1"
         >
           <Image
             src="/mail-icon.svg"
-            alt="Twitter Logo"
+            alt="Gmail Logo"
             width={18}
             height={18}
             className="object-contain cursor-pointer ml-4"
@@ -52,15 +52,15 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://twitter.com"
+          href="http://github.com/taiwoajasa245"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="Github"
           className=" cursor-pointer ml-1"
         >
           <Image
             src="/github-icon.svg"
-            alt="Twitter Logo"
+            alt="Github Logo"
             width={18}
             height={18}
             className="object-contain cursor-pointer ml-4"

@@ -42,9 +42,9 @@ export default function Navbar({ onTabChange }: NavbarProps) {
 
   const renderSideNavTitle = () => {
     if (activeTab === "project") {
-      return <p className="text-[25px] text-[#E2E2E2]">Timeline</p>;
+      return <p className="md:text-[25px] text-[18px] p-3 text-[#E2E2E2]">Timeline</p>;
     } else if (activeTab === "about") {
-      return <p className="text-[25px]  text-[#E2E2E2]">About</p>;
+      return <p className="md:text-[25px] text-[18px] p-5 text-[#E2E2E2]">About</p>;
     } else {
       return (
         <div className="text-center">
@@ -112,8 +112,8 @@ export default function Navbar({ onTabChange }: NavbarProps) {
       )}
 
       {isOpen && activeTab !== "hello" && (
-        <div className="fixed mt-[75px] mb-[60px] inset-0 z-50 md:hidden">
-          <div className="absolute left-0 h-full w-64 bg-[#252525] p-4 transition-transform transform translate-x-0">
+        <div className="fixed mt-[73px] mb-[60px] inset-0 z-50 md:hidden h-full">
+          <div className="absolute  w-[175px] left-0 h-full bg-[#252525] flex flex-col">
             {renderSideNavTitle()}
             {renderSideNavContent()}
           </div>

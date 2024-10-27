@@ -57,18 +57,18 @@ export default function AboutSideNav({ closeModal }: AboutSideNavProps) {
         onClick(); // Call the click handler for each section
         setActiveTab(tab); // Update the active tab in context
       }}
-      className={`flex gap-3 items-center mb-8 w-full cursor-pointer ${
+      className={`flex gap-3 items-center mb-7 w-full p-2 cursor-pointer ${
         isActive || activeAboutTab === tab ? "bg-[#1E1E1E]" : "bg-transparent"
       }`}
     >
       <Image
         src={iconSrc}
         alt={`${label} Icon`}
-        width={14}
-        height={14}
-        className="object-contain"
+        width={10}
+        height={10}
+        className="object-contain md:h-4 "
       />
-      <p className="text-[16px] text-[#F0C969]">{label}</p>
+      <p className="text-[10px] md:text-[14px] text-[#F0C969]">{label}</p>
     </div>
   );
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTabContext } from "@/context/ProjectTabContext";
+import { useProjectTabContext } from "@/context/ProjectTabContext";
 import Image from "next/image";
 
 // Define valid active div types
@@ -9,29 +9,29 @@ interface AboutSideNavProps {
   closeModal: () => void;
 }
 
-export default function AboutSideNav({ closeModal }: AboutSideNavProps) {
-  const { activeTab, setActiveTab } = useTabContext();
-  const [activeDiv, setActiveDiv] = useState<ActiveDivType>(activeTab);
+export default function ProjectSideNav({ closeModal }: AboutSideNavProps) {
+  const { activeProjectTab, setActiveProjectTab } = useProjectTabContext();
+  const [activeDiv, setActiveDiv] = useState<ActiveDivType>(activeProjectTab);
 
   // Individual functions for each div
   const handleBiographyClick = () => {
     console.log("2024 clicked");
     setActiveDiv("2024");
-    setActiveTab("2024");
+    setActiveProjectTab("2024");
     closeModal();
   };
 
   const handleSkillsClick = () => {
     console.log("2023 clicked");
     setActiveDiv("2023");
-    setActiveTab("2023");
+    setActiveProjectTab("2023");
     closeModal();
   };
 
   const handleExperienceClick = () => {
     console.log("2022 clicked");
     setActiveDiv("2022");
-    setActiveTab("2022");
+    setActiveProjectTab("2022");
     closeModal();
   };
 
@@ -55,18 +55,18 @@ export default function AboutSideNav({ closeModal }: AboutSideNavProps) {
     <div
       onClick={() => {
         onClick(); // Call the click handler for each section
-        setActiveTab(tab); // Update the active tab in context
+        setActiveProjectTab(tab); // Update the active tab in context
       }}
-      className={`flex gap-3 items-center mb-8 w-full cursor-pointer ${
-        isActive || activeTab === tab ? "bg-[#1E1E1E]" : "bg-transparent"
+      className={`flex gap-3 items-center mb-8 w-full p-2 cursor-pointer ${
+        isActive || activeProjectTab === tab ? "bg-[#1E1E1E]" : "bg-transparent"
       }`}
     >
       <Image
         src={iconSrc}
         alt={`${label} Icon`}
-        width={14}
-        height={14}
-        className="object-contain"
+        width={10}
+        height={10}
+        className="object-contain md-h4"
       />
       <p className="text-[16px] text-[#F0C969]">{label}</p>
     </div>

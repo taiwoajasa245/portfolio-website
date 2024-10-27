@@ -15,7 +15,7 @@ type TabType = "hello" | "about" | "project";
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabType>("hello"); // State for active tab
 
-  const getFooterContent = () => {
+  const getContent = () => {
     switch (activeTab) {
       case "hello":
         return <Footer />;
@@ -37,19 +37,16 @@ export default function Home() {
       <TabProvider>
         <ProjectTabProvider>
           <AboutTabProvider>
-            <div className="w-full h-screen  flex flex-col">
+            <div className="w-full h-screen flex flex-col  overflow-y-auto">
               <Header />
               <Navbar onTabChange={setActiveTab} />
-
-              <div className="flex-grow overflow-hidden">
+              <div className="flex-grow scrollbar-hide overflow-auto  h-full w-full ">
                 <HomePage activeTab={activeTab} />
+                {/* <p className="text-white text bg-black h-full">Select a tab to see content.</p> */}
+                {/* Pass activeTab as prop */}
               </div>
-
-              {/* Footer, pinned to the bottom */}
-              <div className="shrink-0">{getFooterContent()}</div>
-              {/* 
-              <HomePage activeTab={activeTab} /> 
-              {getFooterContent()} */}
+              {/* footer */}
+              <div>{getContent()}</div>
             </div>
           </AboutTabProvider>
         </ProjectTabProvider>

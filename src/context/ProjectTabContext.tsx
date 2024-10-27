@@ -5,15 +5,15 @@ import { createContext, useContext, useState, ReactNode } from "react";
 type ActiveDivType = "2024" | "2023" | "2022";
 
 interface TabContextProps {
-  activeTab: ActiveDivType;
-  setActiveTab: (tab: ActiveDivType) => void;
+  activeProjectTab: ActiveDivType;
+  setActiveProjectTab: (tab: ActiveDivType) => void;
 }
 
 // Create the context
 const TabContext = createContext<TabContextProps | undefined>(undefined);
 
 // Custom hook to use the context
-export const useTabContext = () => {
+export const useProjectTabContext = () => {
   const context = useContext(TabContext);
   if (!context) {
     throw new Error("useTabContext must be used within a TabProvider");
@@ -23,10 +23,10 @@ export const useTabContext = () => {
 
 // Context Provider
 export const ProjectTabProvider = ({ children }: { children: ReactNode }) => {
-  const [activeTab, setActiveTab] = useState<ActiveDivType>("2024");
+  const [activeProjectTab, setActiveProjectTab] = useState<ActiveDivType>("2024");
 
   return (
-    <TabContext.Provider value={{ activeTab, setActiveTab }}>
+    <TabContext.Provider value={{ activeProjectTab, setActiveProjectTab }}>
       {children}
     </TabContext.Provider>
   );
