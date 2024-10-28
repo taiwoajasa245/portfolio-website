@@ -12,7 +12,7 @@ export default function ProjectsCard({
 }) {
   return (
     <>
-      <div className="mt-5">
+      <div className="mt-5 text-wrap">
         <div className="flex items-center gap-3">
           <Image
             src="/github-icon.svg"
@@ -31,7 +31,7 @@ export default function ProjectsCard({
           />
           
           <div className=" mt-5">
-            <p className="text-[12px] text-[#8E8E8E]">{technologies}</p>
+            <p className="text-[12px] text-[#8E8E8E] text-wrap ">{technologies}</p>
 
             <div className="flex">
               {/* line  */}
@@ -40,7 +40,7 @@ export default function ProjectsCard({
               />
 
               <div className="flex flex-col mt-5  text-[#8E8E8E]  text-[10px]">
-                <p> {details}</p>
+                <p className="text-wrap"> {details}</p>
                 <ProjectBtn
                   gitHubUrl="https://github.com/taiwoajasa245"
                   previewProjectUrl="https://github.com"

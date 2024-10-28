@@ -13,7 +13,7 @@ export default function HomePage({ activeTab }: HomePageProps) {
     switch (activeTab) {
       case "hello":
         return (
-          <div className="flex items-start md:items-center lg:items-start w-full h-full">
+          <div className="flex items-start md:items-center lg:items-start w-full h-full ">
             <HelloTab />
           </div>
         );

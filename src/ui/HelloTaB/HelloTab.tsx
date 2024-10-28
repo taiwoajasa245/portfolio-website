@@ -1,33 +1,33 @@
-import { Metadata } from "next";
+"use client";
+
+import { useEffect, useState } from "react";
 import Grettings from "@/components/Grettings";
 import VerticalLine from "@/components/VerticalLIne";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Ajasa Taiwo Portfolio",
-  description: "Portfolio of a backend developer",
-};
+// Utility to generate an array of numbers [1, 2, 3, ..., 30]
+const numbers = Array.from({ length: 30 }, (_, index) => index + 1);
 
 export default function HelloPage() {
-  const numbers = Array.from({ length: 30 }, (_, index) => index + 1); // Creates an array [1, 2, ..., 50]
-
   return (
     <>
-      {/* clean code  */}
       <div className="flex items-center w-full h-full">
-        {/*  number-list */}
-        <div className="flex ml-3 md:ml-16 flex-col items-center justify-center h-full ">
-          {numbers.map((num) => (
+        {/* Number list with slide-down animation */}
+        <div className="flex ml-3 md:ml-16 flex-col items-center justify-center h-full">
+          {numbers.map((num, index) => (
             <div
               key={num}
-              className=" h-full text-[#343434] text-[10px] md:text-[10px]"
+              className={`h-full text-[#343434] text-[10px] md:text-[10px] 
+                animate-slide-down`}
+              style={{ animationDelay: `${index * 0.05}s` }} // Staggered animation
             >
               <p>{num}</p>
             </div>
           ))}
         </div>
 
-        <div className="flex items-center md:hidden">
+        {/* Line animations */}
+        <div className={`flex items-center md:hidden`}>
           <VerticalLine height="500" />
           <div>
             <VerticalLine height="200" />
@@ -35,23 +35,40 @@ export default function HelloPage() {
           <VerticalLine height="50" />
         </div>
 
-        <div className=" hidden items-center  md:flex ">
-          <div className={`h-[440px] w-[1px] ml-5 bg-[#343434] rounded `} />
-          <div className={`h-[310px] w-[1px] ml-5 bg-[#343434] rounded `} />
-          <div className={`h-[210px] w-[1px] ml-5 bg-[#343434] rounded `} />
-          <div className={`h-[110px] w-[1px] ml-5 bg-[#343434] rounded `} />
-          <div className={`h-[50px] w-[1px] ml-5 bg-[#343434] rounded `} />
+        <div className={`hidden items-center md:flex `}>
+          <div
+            className={`h-[440px] w-[1px] ml-5 bg-[#343434] rounded animate-fade-in`}
+            style={{ animationDelay: `0s` }}
+          />
+          <div
+            className={`h-[310px] w-[1px] ml-5 bg-[#343434] rounded animate-fade-in`}
+            style={{ animationDelay: `0.3s` }}
+          />
+          <div
+            className={`h-[210px] w-[1px] ml-5 bg-[#343434] rounded animate-fade-in`}
+            style={{ animationDelay: `0.6s` }}
+          />
+          <div
+            className={`h-[110px] w-[1px] ml-5 bg-[#343434] rounded animate-fade-in`}
+            style={{ animationDelay: `0.9s` }}
+          />
+          <div
+            className={`h-[50px] w-[1px] ml-5 bg-[#343434] rounded animate-fade-in`}
+            style={{ animationDelay: `1.2s` }}
+          />
         </div>
 
-        <div className="lg:hidden ">
+        {/* Greeting animation */}
+        <div className={`lg:hidden flex`}>
           <Grettings />
         </div>
 
-        {/* desktop screen */}
-        <div className="hidden w-full space-x-60 items-center lg:flex">
-          {/* Grettings */}
-          <Grettings />
-
+        {/* Desktop screen */}
+        <div className={`hidden w-full space-x-60 items-center lg:flex`}>
+          {/* Wrapper for consistent alignment */}
+          <div className="w-[30%] min-w-[200px]">
+            <Grettings />
+          </div>
           <Image
             src="/home-page-icon.svg"
             alt="homepage Logo"

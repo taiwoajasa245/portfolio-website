@@ -55,7 +55,7 @@ export default function Navbar({ onTabChange }: NavbarProps) {
   };
 
   return (
-    <nav className={`flex items-center justify-between w-full bg-[#252525]  `}>
+    <nav className={`flex items-center justify-between w-full bg-[#252525] animate-slide-down `}>
       {/* Tab Links */}
       <div className="flex">
         <div
