@@ -20,7 +20,7 @@ export default function HelloPage() {
           {numbers.map((num) => (
             <div
               key={num}
-              className=" h-full text-[#343434] text-[16px] md:text-[10px]"
+              className=" h-full text-[#343434] text-[10px] md:text-[10px]"
             >
               <p>{num}</p>
             </div>

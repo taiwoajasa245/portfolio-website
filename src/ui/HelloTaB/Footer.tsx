@@ -17,7 +17,7 @@ export default function Footer() {
             alt="Twitter Logo"
             width={15}
             height={15}
-            className="object-contain cursor-pointer ml-1"
+            className="object-contain cursor-pointer ml-3"
           />
         </a>
 
@@ -33,7 +33,7 @@ export default function Footer() {
             alt="linkden Logo"
             width={18}
             height={18}
-            className="object-contain cursor-pointer ml-2"
+            className="object-contain cursor-pointer ml-3"
           />
         </a>
 
@@ -48,7 +48,7 @@ export default function Footer() {
             alt="Gmail Logo"
             width={18}
             height={18}
-            className="object-contain cursor-pointer  ml-2"
+            className="object-contain cursor-pointer  ml-3"
           />
         </a>
 
@@ -63,7 +63,7 @@ export default function Footer() {
             alt="Github Logo"
             width={18}
             height={18}
-            className="object-contain cursor-pointer  ml-2"
+            className="object-contain cursor-pointer  ml-3"
           />
         </a>
       </div>
