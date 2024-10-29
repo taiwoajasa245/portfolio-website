@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Grettings from "@/components/Grettings";
 import VerticalLine from "@/components/VerticalLIne";
 import Image from "next/image";

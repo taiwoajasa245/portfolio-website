@@ -9,7 +9,7 @@ export default function Grettings() {
   const [charIndex, setCharIndex] = useState(0); // Track current character index
 
   const fullText = "Ajasa Taiwo"; // The full text to type
-  const colors = ["#F0C969", "#79A0BC", "#FDFDFD"]; // Array of colors
+  const textColors = ["#F0C969", "#79A0BC", "#FDFDFD"]; // Array of colors
 
   useEffect(() => {
     // Typing and deleting logic
@@ -25,7 +25,7 @@ export default function Grettings() {
       } else if (charIndex === 0 && deleting) {
         // Switch color and start typing again when deletion completes
         setDeleting(false);
-        setColorIndex((prev) => (prev + 1) % colors.length); // Cycle color
+        setColorIndex((prev) => (prev + 1) % textColors.length); // Cycle color
       } else if (charIndex === fullText.length) {
         // When typing is complete, initiate deletion after a short pause
         setTimeout(() => setDeleting(true), 1000);
@@ -54,7 +54,7 @@ export default function Grettings() {
         {/* Typewriter effect with dynamic color and blinking cursor */}
         <h1
           className="text-[27px] md:text-[40px] md:tracking-[10px] tracking-widest "
-          style={{ color: colors[colorIndex] }} // Apply the current color
+          style={{ color: textColors[colorIndex] }} // Apply the current color
         >
           {text}
           <span
