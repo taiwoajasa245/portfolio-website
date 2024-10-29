@@ -75,7 +75,7 @@ export default function Navbar({ onTabChange }: NavbarProps) {
                 : "border-t-transparent bg-[#2D2D2D] text-[#969696]  drop-shadow-lg"
             }`}
           >
-            <p className="text-[10px] text-center p-3  md:px-10 md:text-[12px] ">
+            <p className="text-[11px] text-center p-3 px-5  md:px-10 md:text-[12px] ">
               Hello
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function Navbar({ onTabChange }: NavbarProps) {
                 : "border-t-transparent bg-[#2D2D2D] text-[#969696]  drop-shadow-lg"
             }`}
           >
-            <p className="text-[10px] text-center p-3 md:px-10 md:text-[12px] ">
+            <p className="text-[11px] text-center p-3  px-5 md:px-10 md:text-[12px] ">
               About
             </p>
           </div>
@@ -105,7 +105,7 @@ export default function Navbar({ onTabChange }: NavbarProps) {
                 : "border-t-transparent bg-[#2D2D2D] text-[#969696] drop-shadow-lg"
             }`}
           >
-            <p className="text-[10px] text-center p-3  md:px-10 md:text-[12px] ">
+            <p className="text-[11px] text-center p-3 px-5 md:px-10 md:text-[12px] ">
               Project
             </p>
           </div>
