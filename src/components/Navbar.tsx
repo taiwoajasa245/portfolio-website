@@ -61,51 +61,47 @@ export default function Navbar({ onTabChange }: NavbarProps) {
 
   return (
     <>
-      <nav
-        className={`flex items-center justify-between w-full bg-[#252525] lg:animate-slide-down `}
-     
-      >
+      <nav className="flex items-center justify-between w-full bg-[#252525] lg:animate-slide-down">
         {/* Tab Links */}
         <div className="flex">
+          {/* Hello Tab */}
           <div
             onClick={() => handleTabChange("hello")}
-            className={`bg-[#1E1E1E] border-t-4  cursor-pointer ${
+            className={`relative bg-[#1E1E1E] border-t-4 cursor-pointer transition-all duration-500 overflow-hidden ${
               activeTab === "hello"
-                ? "border-t-[#F0C969] text-[#F0C969]  drop-shadow-none"
-                : "border-t-transparent bg-[#2D2D2D] text-[#969696]  drop-shadow-lg"
+                ? "border-t-[#F0C969] text-[#F0C969] animate-color-slide"
+                : "border-t-transparent bg-[#2D2D2D] text-[#969696]"
             }`}
           >
-            <p className="text-[11px] text-center p-3 px-5  md:px-10 md:text-[12px] ">
+            <p className="text-[11px] text-center p-3 px-5 md:px-10 md:text-[12px]">
               Hello
             </p>
           </div>
 
-          {/* about.css */}
-
+          {/* About Tab */}
           <div
             onClick={() => handleTabChange("about")}
-            className={`bg-[#1E1E1E] border-t-4  cursor-pointer mx-[1px] ${
+            className={`relative bg-[#1E1E1E] border-t-4 cursor-pointer mx-[1px] overflow-hidden transition-all duration-500 ${
               activeTab === "about"
-                ? "border-t-[#F0C969] text-[#F0C969]  drop-shadow-none"
-                : "border-t-transparent bg-[#2D2D2D] text-[#969696]  drop-shadow-lg"
+                ? "border-t-[#F0C969] text-[#F0C969] animate-color-slide"
+                : "border-t-transparent bg-[#2D2D2D] text-[#969696]"
             }`}
           >
-            <p className="text-[11px] text-center p-3  px-5 md:px-10 md:text-[12px] ">
+            <p className="text-[11px] text-center p-3 px-5 md:px-10 md:text-[12px]">
               About
             </p>
           </div>
 
-          {/* project.js  */}
-
+          {/* Project Tab */}
           <div
             onClick={() => handleTabChange("project")}
-            className={`bg-[#1E1E1E] border-t-4  cursor-pointer ${
+            className={`relative bg-[#1E1E1E] border-t-4 cursor-pointer overflow-hidden transition-all duration-500 ${
               activeTab === "project"
-                ? "border-t-[#F0C969] text-[#F0C969]  drop-shadow-none"
-                : "border-t-transparent bg-[#2D2D2D] text-[#969696] drop-shadow-lg"
+                ? "border-t-[#F0C969] text-[#F0C969] animate-color-slide"
+                : "border-t-transparent bg-[#2D2D2D] text-[#969696]"
             }`}
           >
-            <p className="text-[11px] text-center p-3 px-5 md:px-10 md:text-[12px] ">
+            <p className="text-[11px] text-center p-3 px-5 md:px-10 md:text-[12px]">
               Project
             </p>
           </div>
@@ -113,7 +109,7 @@ export default function Navbar({ onTabChange }: NavbarProps) {
 
         {/* Hamburger Menu Button */}
         {activeTab !== "hello" && (
-          <div className={`md:hidden mr-4`}>
+          <div className="md:hidden mr-4">
             <button onClick={toggleMenu}>
               <Image
                 src="/ham-icon.svg"
@@ -125,8 +121,8 @@ export default function Navbar({ onTabChange }: NavbarProps) {
             </button>
           </div>
         )}
-
       </nav>
+
       {isOpen && activeTab !== "hello" && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           {/* Backdrop */}
